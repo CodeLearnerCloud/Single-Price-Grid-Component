@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
+
+:root {
+  --ff: 'Karla', sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-lite: 200;
+
+  --fz: 1rem;
+
+  --clr-primary: hsl(179, 62%, 43%);
+  --clr-secondary: hsl(71, 73%, 54%);
+  --clr-blue: hsl(218, 22%, 67%);
+  --clr-gray: hsl(204, 43%, 93%);
+
+  --clr-primary-cyan-dark: hsl(179, 61%, 44%); 
+  --clr-primary-cyan-light: hsl(179, 47%, 52%); 
+}
+
+*,*::after,*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: .8rem;
+  background: var(--clr-gray);
+  color: var(--clr-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  color: var(--clr-primary);
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.sub-title {
+  color: var(--clr-secondary);
+  font-size: var(--fz);
+  margin: 1rem 0;
+}
+
+.desc {
+  line-height: 1.8;
+  font-weight: var(--fw-bold);
+  margin: 1rem 0;
+}
+
+/* main */
+main {
+  width: 80vw;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* main -> community */
+.community {
+  padding: 2rem 1rem;
+}
+
+/* container -> subscription */
+.subscription {
+  background: var(--clr-primary-cyan-dark);
+  padding: 2rem 1rem;
+}
+
+.subscription .title {
+  color: var(--clr-gray);
+}
+
+.subscription .desc {
+  color: var(--clr-gray);
+  font-size: 1rem;
+}
+
+.subscription .btn {
+  color: var(--clr-gray);
+  background: var(--clr-secondary);
+  border: none;
+  width: 100%;
+  padding: 1rem 0;
+  font-weight: var(--fw-bold);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  font-size: 1rem;
+}
+
+.subscription .sub-title {
+  color: var(--clr-gray);
+  font-size: 2rem;
+}
+
+.sub-title .price-plan{
+  font-size: 1rem;
+  opacity: .9;
+}
+
+/* container -> about-us */
+.about-us {
+  background: var(--clr-primary-cyan-light);
+  padding: 2rem 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.about-us .title{
+  color: var(--clr-gray);
+}
+
+.about-us .desc{
+  color: var(--clr-gray);
+}
+
+@media screen and (min-width: 376px){
+  .container {
+    display: flex;
+  }
+
+  .subscription {
+    padding: 2rem;
+    flex: 1;
+    border-radius: 0 0 0 10px;
+  }
+
+  .about-us {
+    border-radius: 0 0 10px 0;
+    padding: 2rem;
+    flex: 1;
+  }
+  
+  main {
+    width: 80vw;
+  }
+
+  .community {
+    padding: 2rem;
+  }
+}
+
+/* footer */
+footer {
+  margin-top: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px){
+  main {
+    width: 50vw;
+  }
+}
